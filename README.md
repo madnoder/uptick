@@ -33,7 +33,7 @@ fi
 ```
 ```
 cd $HOME
-wget https://download.uptick.network/download/uptick/testnet/release/v0.2.3/v0.2.3.tar.gz
+wget https://download.uptick.network/download/uptick/testnet/release/v0.2.3/v0.2.3.tar.gz --no-check-certificate
 tar -zxvf v0.2.3.tar.gz
 sudo chmod +x uptick-v0.2.3/linux/uptickd
 sudo mv uptick-v0.2.3/linux/uptickd $HOME/go/bin/
@@ -51,6 +51,7 @@ curl -o $HOME/.uptickd/config/genesis.json https://raw.githubusercontent.com/Upt
 curl -o $HOME/.uptickd/config/addrbook.json https://raw.githubusercontent.com/kj89/testnet_manuals/main/uptick/addrbook.json
 curl -o $HOME/.uptickd/config/config.toml https://raw.githubusercontent.com/UptickNetwork/uptick-testnet/main/uptick_7000-1/config.toml
 curl -o $HOME/.uptickd/config/app.toml https://raw.githubusercontent.com/UptickNetwork/uptick-testnet/main/uptick_7000-1/app.toml
+```
 ```
 SEEDS=$(curl -sL https://raw.githubusercontent.com/UptickNetwork/uptick-testnet/main/uptick_7000-1/seeds.txt | tr '\n' ',')
 PEERS=$(curl -sL https://raw.githubusercontent.com/UptickNetwork/uptick-testnet/main/uptick_7000-1/peers.txt | tr '\n' ',')
